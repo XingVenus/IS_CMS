@@ -13,10 +13,10 @@ class Yii extends \yii\BaseYii
      */
     public static $app;
 
-    public static function getVersion()
-    {
-        return '1.0.0';
-    }
+    // public static function getVersion()
+    // {
+    //     return '1.0.0';
+    // }
     public static function powered()
     {
         return parent::powered() . ' & <a href="http://www.51siyuan.cn/" rel="external">Yii2 CMF</a>';

@@ -15,7 +15,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "fxp/composer-asset-plugin":"^1.2.0",
         "yiisoft/yii2": ">=2.0.9",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
@@ -41,7 +40,9 @@
     "require-dev": {
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*"
+        "yiisoft/yii2-faker": "*",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1"
     },
     "autoload": {
         "files": [
@@ -61,10 +62,7 @@
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
-            "installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
+            "enabled": false
         }
     },
     "extra": {
@@ -84,10 +82,10 @@
             ]
         }
     },
-    "repositories": {
-        "packagist": {
+    "repositories": [
+        {
             "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
+            "url": "https://asset-packagist.org"
         }
-    }
+    ]
 }
